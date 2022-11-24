@@ -7,17 +7,45 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Etch A Sketch</title>
+		<script src="js/script.js" defer></script>
 	</head>
 	<body>
-		<h1>Etch-A-Sketch</h1>
+		<header class="header">
+			<h1 class="main-heading">Etch-A-Sketch</h1>
+		</header>
 		<main class="container">
 			<div class="container__item menu-container">
-				<button class="menu__item">Colour Picker</button>
-				<button class="menu__item">Random colour genetator</button>
-				<button class="menu__item">Shader</button>
-				<button class="menu__item">grid Size</button>
+				<label for="colour-picker" class="menu__item"
+					>Select a Colour:
+					<input
+						type="color"
+						id="colour-picker"
+						name="colour-picker"
+						value="#ff0000"
+					/>
+				</label>
+
+				<button id="random-colour" class="menu__item">
+					Random colour genetator
+				</button>
+				<button id="shader" class="menu__item">Shader</button>
+				<label for="grid-size" class="menu__item">
+					<h3>Grid Size</h3>
+					<input
+						type="range"
+						min="1"
+						max="100"
+						step="1"
+						value="16"
+						name="grid-size"
+						id="grid-size"
+					/>
+					<h3 class="grid-size"></h3>
+				</label>
 			</div>
-			<div class="container__item canvas-container"></div>
+			<div class="container__item canvas-container">
+				<div class="canvas__item"></div>
+			</div>
 		</main>
 		<footer class="footer">Madzi Hove &copy; 2022</footer>
 	</body>

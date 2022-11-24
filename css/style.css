@@ -1,0 +1,64 @@
+:root {
+	--grid-size: 4;
+}
+
+body {
+	height: 100vh;
+}
+
+h1 {
+	text-align: center;
+}
+
+input {
+	border: 5px solid rgb(207, 204, 204);
+	border-radius: 5px;
+}
+
+.container {
+	display: flex;
+	height: 90vh;
+	border: 1px solid red;
+}
+
+.container__item {
+	flex: 1;
+	border: 1px solid blue;
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 1rem;
+}
+
+.menu__item {
+	flex-shrink: 0;
+	margin: 1rem 4rem;
+	padding: 0.5rem 1rem;
+}
+
+.canvas-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	flex: 3;
+}
+
+.canvas__item {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-size), 1fr);
+	grid-template-rows: repeat(var(--grid-size), 1fr);
+	/* flex-direction: column; */
+	/* flex: 1; */
+	height: 600px;
+	width: 600px;
+	border: 1px solid red;
+}
+
+.cell {
+	/* flex: 1; */
+	border: 1px solid red;
+}
