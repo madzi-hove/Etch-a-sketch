@@ -1,5 +1,6 @@
 :root {
-	--grid-size: 4;
+	--grid-size: 16;
+	--cell-background-colour: #fff;
 }
 
 body {
