@@ -4,15 +4,21 @@
 
 body {
 	font-family: "Roboto", sans-serif;
+	color: #f3efe0;
 	height: 100vh;
 }
 
-h1 {
+header,
+footer {
 	text-align: center;
+	background-color: #222222;
 }
 
-label {
-	padding: 0;
+button {
+	color: #f3efe0;
+	border: #222222;
+	border-radius: 5px;
+	background-color: #434242;
 }
 
 input {
@@ -21,17 +27,17 @@ input {
 }
 input[type="color"] {
 	width: 80%;
+	border-color: #434242;
 }
 
 .container {
 	display: flex;
 	height: 90vh;
-	border: 1px solid red;
+	background-color: #22a39f;
 }
 
 .container__item {
 	flex: 1;
-	border: 1px solid blue;
 }
 
 .menu-container {
@@ -47,7 +53,6 @@ input[type="color"] {
 	width: 80%;
 	margin: 1rem 4rem;
 	padding: 0.5rem 1rem;
-	border: 1px solid red;
 }
 
 .canvas-container {
@@ -64,10 +69,10 @@ input[type="color"] {
 	grid-template-rows: repeat(var(--grid-size), 1fr);
 	height: 600px;
 	width: 600px;
-	border: 1px solid red;
 }
 
 .cell {
+	background-color: #fff;
 	border: 1px solid rgb(222, 217, 217);
 }
 
