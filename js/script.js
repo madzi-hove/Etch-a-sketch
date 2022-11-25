@@ -27,12 +27,12 @@ const deleteGrid = function () {
 };
 
 const randomColour = function () {
-	let colour1, colour2, colour3;
-	const colours = [colour1, colour2, colour3];
-	colours.map((colour) => {
-		colour = Math.floor(Math.random() * 256);
-	});
-	return `rgb(${colours[0]}, ${colours[1]}, ${colours[2]})`;
+	const colours = [];
+	for (let i = 0; i < 3; i++) {
+		colours.push(Math.floor(Math.random() * 256));
+	}
+
+	console.log(`rgb(${colours[0]}, ${colours[1]}, ${colours[2]})`);
 };
 
 const mode = function (event) {};
@@ -47,7 +47,6 @@ const inputChange = function (event) {
 		deleteGrid();
 		size = event.target.value;
 		root.style.setProperty("--grid-size", size);
-		console.log(rootStyles.getPropertyValue("--grid-size"));
 		createGrid(size);
 		gridSizeDisplay.innerText = `${size} X ${size}`;
 	}
