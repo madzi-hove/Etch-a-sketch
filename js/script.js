@@ -32,9 +32,9 @@ const clearGrid = function () {
 	list.forEach((element) => (element.style.backgroundColor = "#fff"));
 };
 
-const showGrid = function () {
+const hideGrid = function () {
 	const list = [...document.querySelectorAll(".cell")];
-	list.forEach((element) => element.classList.toggle("show-grid"));
+	list.forEach((element) => element.classList.toggle("hide-grid"));
 };
 
 const randomColour = function () {
@@ -45,16 +45,12 @@ const randomColour = function () {
 	return `rgb(${colours[0]}, ${colours[1]}, ${colours[2]})`;
 };
 
-const shader = function () {
-	penColour;
-};
-
 const buttonOptions = function (event) {
 	if (event.target.id === "clear") {
 		clearGrid();
 	}
 	if (event.target.id === "show-grid") {
-		showGrid();
+		hideGrid();
 	}
 	target = event.target.id;
 };
