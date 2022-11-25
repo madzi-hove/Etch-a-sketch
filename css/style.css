@@ -1,6 +1,5 @@
 :root {
 	--grid-size: 16;
-	--cell-background-colour: #fff;
 }
 
 body {
@@ -38,6 +37,7 @@ input {
 	flex-shrink: 0;
 	margin: 1rem 4rem;
 	padding: 0.5rem 1rem;
+	border: 1px solid red;
 }
 
 .canvas-container {
@@ -52,14 +52,11 @@ input {
 	display: grid;
 	grid-template-columns: repeat(var(--grid-size), 1fr);
 	grid-template-rows: repeat(var(--grid-size), 1fr);
-	/* flex-direction: column; */
-	/* flex: 1; */
 	height: 600px;
 	width: 600px;
 	border: 1px solid red;
 }
 
-.cell {
-	/* flex: 1; */
-	border: 1px solid red;
+.cell.show-grid {
+	border: 1px solid rgb(222, 217, 217);
 }
